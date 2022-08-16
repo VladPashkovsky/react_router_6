@@ -12,7 +12,10 @@ const Layout = () => {
         <CustomLink to='/posts'>Blog</CustomLink>
         <CustomLink to='/about'>About</CustomLink>
       </header>
-      <Outlet />
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Outlet />
+      </div>
+
       <footer>2022</footer>
     </>
   )

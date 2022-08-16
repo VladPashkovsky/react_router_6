@@ -60,3 +60,8 @@ main a:hover {
     color: var(--color-active);
     cursor: default;
 }
+
+footer {
+    text-align: center;
+
+}
