@@ -35,4 +35,4 @@ const Blogpage = () => {
   )
 }
 
-export { Blogpage }
+export default Blogpage
