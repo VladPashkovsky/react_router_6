@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Suspense fallback={<p>Loading...</p>}> <Homepage /> </Suspense>} />
-          <Route path='posts' element={<Suspense> <Blogpage /> </Suspense>} />
+          <Route path='posts' element={<Suspense fallback={<p>Loading...</p>}> <Blogpage /> </Suspense>} />
           <Route path='posts/:id' element={<Singlepage />} />
           <Route path='posts/:id/edit' element={<Editpost />} />
           <Route path='posts/new' element={
