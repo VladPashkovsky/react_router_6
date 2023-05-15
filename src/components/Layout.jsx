@@ -11,6 +11,7 @@ const Layout = () => {
         <NavLink to='/' className={setActive}>Home</NavLink>
         <CustomLink to='/posts'>Blog</CustomLink>
         <CustomLink to='/about'>About</CustomLink>
+        <CustomLink to='/image'>LazyImage</CustomLink>
       </header>
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <Outlet />

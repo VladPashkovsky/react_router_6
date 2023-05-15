@@ -11,6 +11,7 @@ import { Layout } from './components/Layout'
 import { Loginpage } from './pages/Loginpage'
 import { RequireAuth } from './hok/RequireAuth'
 import { AuthProvider } from './hok/AuthProvider'
+import LazyImage from './pages/LazyImage'
 
 const Homepage = lazy(() => import('./pages/Homepage'))
 
@@ -39,6 +40,7 @@ function App() {
           <Route path='about' element={<Aboutpage />}>
             <Route path='contacts' element={<p>This is Our Contacts</p>} />
           </Route>
+          <Route path='image' element={<LazyImage />} />
           <Route path='about-us' element={<Navigate to='/about' replace />} />
           <Route path='login' element={<Loginpage />} />
           <Route path='*' element={<Notfoundpage />} />
