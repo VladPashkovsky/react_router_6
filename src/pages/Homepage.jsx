@@ -4,8 +4,9 @@ const Homepage = () => {
   return (
     <div>
       <h1>Home page is here</h1>
+      <h2>Get started with LAZY SUSPENSE</h2>
     </div>
   )
 }
 
-export {Homepage}
+export default Homepage

@@ -1,7 +1,8 @@
+import React, { lazy, Suspense } from 'react'
 import { Routes, Route, Link, Navigate } from 'react-router-dom'
 import { Aboutpage } from './pages/Aboutpage'
 import { Blogpage } from './pages/Blogpage'
-import { Homepage } from './pages/Homepage'
+// import { Homepage } from './pages/Homepage'
 import { Notfoundpage } from './pages/Notfoundpage'
 import { Singlepage } from './pages/Singlepge'
 import { Createpost } from './pages/Createpost'
@@ -11,12 +12,14 @@ import { Loginpage } from './pages/Loginpage'
 import { RequireAuth } from './hok/RequireAuth'
 import { AuthProvider } from './hok/AuthProvider'
 
+const Homepage = lazy(() => import('./pages/Homepage'))
+
 function App() {
   return (
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Homepage />} />
+          <Route index element={<Suspense fallback={<p>Loading...</p>}> <Homepage /> </Suspense>} />
           <Route path='posts' element={<Blogpage />} />
           <Route path='posts/:id' element={<Singlepage />} />
           <Route path='posts/:id/edit' element={<Editpost />} />
